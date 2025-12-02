@@ -468,3 +468,70 @@ img {
         gap: 2rem;
     }
 }
+
+/* ============================== */
+/* ESTILO PARA BLOQUES DE CÓDIGO */
+/* ============================== */
+
+.code-window {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    box-shadow: var(--shadow-sm);
+}
+
+.code-window pre {
+    margin: 0;
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+.code-window code {
+    color: var(--accent-color);
+}
+
+/* ============================== */
+/* ESTILO PARA IFRAMES DE P5.JS   */
+/* ============================== */
+
+.big-editor {
+    width: 100%;
+    height: 420px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    margin: 1.5rem 0;
+    background-color: #000;
+    box-shadow: var(--shadow-lg);
+}
+
+/* ============================== */
+/* LISTAS + BULLETS PERSONALIZADOS */
+/* ============================== */
+
+.module-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.module-card ul li {
+    display: flex;
+    align-items: start;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.module-card ul li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1;
+}

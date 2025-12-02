@@ -1,167 +1,212 @@
-<!DOCTYPE html>
-<html lang="es">
+<!-- ======================================================= -->
+<!-- HERO / TÍTULO DE LA SECCIÓN -->
+<!-- ======================================================= -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Código y ejemplos de programación - DEIM">
-    <title>Código | DEIM</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        /* Estilos adicionales específicos para esta página */
-        .code-container {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">
+      Básicos de la programación en <span class="highlight">p5.js</span>
+    </h1>
+    <p class="hero-subtitle">
+      Conceptos fundamentales para aprender a programar de forma visual y creativa.
+    </p>
+  </div>
+</section>
 
-        .code-container h3 {
-            color: var(--text-main);
-            margin-bottom: 1rem;
-            font-size: 1.25rem;
-        }
 
-        .code-container p {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
+<!-- ======================================================= -->
+<!-- 1. ¿Qué es la programación? -->
+<!-- ======================================================= -->
 
-        pre {
-            background-color: var(--bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 1.5rem;
-            overflow-x: auto;
-            margin-bottom: 1rem;
-        }
+<section class="modules-section">
+  <div class="container">
 
-        code {
-            font-family: 'Courier New', monospace;
-            color: #60A5FA;
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
+    <h2 class="section-title">1. ¿Qué es la programación?</h2>
+    <p class="section-description">
+      Programar es dar instrucciones a un ordenador para que realice tareas. Estas instrucciones se escriben en un lenguaje que la computadora puede entender.
+    </p>
 
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 2rem;
-            transition: color 0.2s ease;
-        }
+    <div class="module-card">
+      <p>
+        <b>El código se ejecuta de arriba hacia abajo. El orden sí importa.</b>
+      </p>
 
-        .back-link:hover {
-            color: var(--primary-dark);
-        }
+      <ul>
+        <li>Automatizar procesos y crear aplicaciones, juegos y arte.</li>
+        <li>Un lenguaje de programación tiene reglas propias.</li>
+        <li>Usaremos JavaScript con p5.js (visual y creativo).</li>
+      </ul>
 
-        .page-header {
-            text-align: center;
-            padding: 3rem 0;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 3rem;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-main);
-        }
-
-        .page-header p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
-        <a href="../index.html" class="back-link">← Volver al inicio</a>
-
-        <div class="page-header">
-            <h1>Código y Ejemplos</h1>
-            <p>Ejemplos de código y ejercicios prácticos</p>
-        </div>
-
-        <div class="code-container">
-            <h3>Ejemplo 1: Hola Mundo en JavaScript</h3>
-            <p>Un ejemplo básico para comenzar con JavaScript.</p>
-            <pre><code>// Hola Mundo en JavaScript
-console.log("¡Hola Mundo!");
-
-// Función simple
-function saludar(nombre) {
-    return `Hola, ${nombre}!`;
-}
-
-console.log(saludar("Estudiante"));</code></pre>
-        </div>
-
-        <div class="code-container">
-            <h3>Ejemplo 2: Variables y Tipos de Datos</h3>
-            <p>Trabajando con diferentes tipos de datos en JavaScript.</p>
-            <pre><code>// Variables
-let nombre = "DEIM";
-const año = 2025;
-var activo = true;
-
-// Arrays
-let colores = ["rojo", "verde", "azul"];
-
-// Objetos
-let estudiante = {
-    nombre: "Ana",
-    edad: 20,
-    curso: "DEIM"
-};
-
-console.log(estudiante.nombre);</code></pre>
-        </div>
-
-        <div class="code-container">
-            <h3>Ejemplo 3: Funciones y Bucles</h3>
-            <p>Estructuras de control y funciones básicas.</p>
-            <pre><code>// Bucle for
-for (let i = 0; i < 5; i++) {
-    console.log(`Iteración ${i}`);
-}
-
-// Función con parámetros
-function calcularArea(base, altura) {
-    return base * altura;
-}
-
-let area = calcularArea(10, 5);
-console.log(`El área es: ${area}`);</code></pre>
-        </div>
-
-        <div class="code-container">
-            <h3>Ejemplo 4: Manipulación del DOM</h3>
-            <p>Interactuando con elementos HTML desde JavaScript.</p>
-            <pre><code>// Seleccionar elementos
-const boton = document.querySelector('#miBoton');
-const texto = document.querySelector('#miTexto');
-
-// Agregar evento
-boton.addEventListener('click', () => {
-    texto.textContent = '¡Texto cambiado!';
-    texto.style.color = '#3B82F6';
-});
-
-// Crear nuevo elemento
-const nuevoDiv = document.createElement('div');
-nuevoDiv.className = 'card';
-nuevoDiv.textContent = 'Nuevo contenido';
-document.body.appendChild(nuevoDiv);</code></pre>
-        </div>
+      <h3 class="card-title">Ejemplo en p5.js</h3>
+      <iframe 
+        src="https://editor.p5js.org/avezray/full/JTjhOdGRB"
+        class="big-editor">
+      </iframe>
     </div>
-</body>
 
-</html>
+  </div>
+</section>
+
+
+<!-- ======================================================= -->
+<!-- 2. Variables -->
+<!-- ======================================================= -->
+
+<section class="resources-section">
+  <div class="container">
+
+    <h2 class="section-title">2. Variables</h2>
+    <p class="section-description">
+      Una variable es un <b>contenedor</b> donde guardamos información que puede cambiar mientras el programa está funcionando.
+    </p>
+
+    <div class="module-card">
+      <p>
+        Para crear una variable usamos <code>let</code> seguido del nombre. Su valor puede cambiar en cualquier momento.
+      </p>
+
+      <div class="code-window">
+<pre><code>let x = 50;  // Guardamos un número en la variable x
+
+function draw() {
+  x = x + 1;  // Actualizamos el valor para mover un objeto
+}</code></pre>
+      </div>
+
+      <p>
+        Gracias a las variables, nuestros programas pueden ser dinámicos y cambiar con el tiempo.
+      </p>
+
+      <h3 class="card-title">Ejemplo básico</h3>
+
+      <iframe 
+        src="https://editor.p5js.org/AndresEducacion/sketches/0BEfHMC_T"
+        class="big-editor">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ======================================================= -->
+<!-- 3. Condicionales -->
+<!-- ======================================================= -->
+
+<section class="modules-section">
+  <div class="container">
+
+    <h2 class="section-title">3. Estructuras de control (Condicionales)</h2>
+
+    <p class="section-description">
+      Las estructuras <code>if</code> y <code>else</code> permiten que el programa tome decisiones basadas en condiciones.
+    </p>
+
+    <div class="module-card">
+      <h3 class="card-title">Ejemplo if / else</h3>
+
+      <div class="code-window">
+<pre><code>let x = 0;
+
+function draw() {
+  x = x + 1;
+
+  if (x > 200) {
+    fill(255, 0, 0);
+  } else {
+    fill(0, 0, 255);
+  }
+
+  circle(x, 200, 50);
+}</code></pre>
+      </div>
+
+      <iframe 
+        src="https://editor.p5js.org/AndresEducacion/sketches/zFd75-jJP"
+        class="big-editor">
+      </iframe>
+
+      <h4 class="card-title">if…else if</h4>
+
+      <div class="code-window">
+<pre><code>if (x &lt; 100) {
+  // primera condición
+} else if (x &lt; 200) {
+  // segunda condición
+} else {
+  // si ninguna se cumple
+}</code></pre>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ======================================================= -->
+<!-- 4. Operadores lógicos -->
+<!-- ======================================================= -->
+
+<section class="resources-section">
+  <div class="container">
+
+    <h2 class="section-title">4. Operadores lógicos</h2>
+
+    <div class="module-card">
+
+      <table class="resource-item" style="width:100%; text-align:left;">
+        <tr><th>Operador</th><th>Significado</th><th>Ejemplo</th></tr>
+        <tr><td>&amp;&amp;</td><td>y</td><td>x &gt; 100 && x &lt; 200</td></tr>
+        <tr><td>||</td><td>o</td><td>x &gt; 200 || y &lt; 50</td></tr>
+        <tr><td>!</td><td>no</td><td>!(x &gt; 100)</td></tr>
+      </table>
+
+      <h3 class="card-title">Ejemplo</h3>
+
+      <iframe 
+        src="https://editor.p5js.org/AndresEducacion/sketches/drnGpmoU2"
+        class="big-editor">
+      </iframe>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ======================================================= -->
+<!-- 5. Bucles -->
+<!-- ======================================================= -->
+
+<section class="modules-section">
+  <div class="container">
+
+    <h2 class="section-title">5. Bucles</h2>
+    <p class="section-description">
+      Un bucle permite repetir acciones múltiples veces sin escribirlas una por una.
+    </p>
+
+    <div class="module-card">
+
+      <h3 class="card-title">Ejemplo con for</h3>
+
+      <div class="code-window">
+<pre><code>function draw() {
+  background(220);
+
+  // Bucle que dibuja líneas verticales
+  for (let x = 0; x &lt; width; x = x + 20) {
+    line(x, 0, x, height);
+  }
+}</code></pre>
+      </div>
+
+      <iframe 
+        src="https://editor.p5js.org/AndresEducacion/sketches/R980JkhKI"
+        class="big-editor">
+      </iframe>
+
+    </div>
+
+  </div>
+</section>
