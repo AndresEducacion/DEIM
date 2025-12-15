@@ -116,7 +116,15 @@
       color: #d6e3f5;
     }
   </style>
+    <link rel="stylesheet" href="../style.css">
 </head>
+
+    <!-- Header sencillo -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">DEIM<span class="dot">.</span></a>
+        </div>
+    </header>
 
 <body>
 
@@ -302,91 +310,6 @@ La acción es imprimir el saludo.
   <div class="container">
 
     <div class="card">
-<img src="../assets/codigo2/codigo14.png" alt="Diapositiva ampliación funciones">
-<img src="../assets/codigo2/codigo15.png" alt="Diapositiva ampliación funciones">
-
-<!-- VIDEO Portal2 -->
-<div style="
-  margin-top: 2.5rem;
-  background: var(--surface-light);
-  padding: 1.5rem;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-color);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-">
-
-  <h3 style="color: var(--primary-color); margin-top: 0;">
-    Explicación del funcionamiento de los portales en Portal 2
-  </h3>
-
-  <div style="
-    position: relative;
-    padding-bottom: 56.25%; 
-    height: 0;
-    overflow: hidden;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--border-color);
-  ">
-    <iframe 
-      src="https://www.youtube.com/embed/_SmPR5mvH7w" 
-      title="Video explicativo"
-      frameborder="0"
-      allowfullscreen
-      style="
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      ">
-    </iframe>
-  </div>
-</div>
-<img src="../assets/codigo2/codigo16.png" alt="Diapositiva ampliación funciones">
-<h3>Abrir portal solo en paredes blancas</h3>
-      <pre><code>void openPortal(superficieBlanca) {
-  if (superficieBlanca = true) {
-    // haz un portal en esa pared del color actual
-  }
-
-  if (portalAzulIsOpen = true) {
-    // cambia al portal naranja
-  } else {
-    // cambia al portal azul
-  }
-}
-
-// Aunque no sepamos todavia escribir de manera concreta
-el código que ejecuta las acciones de nuestro ejemplo,
-me interesa sobre todo el ejecicio de expresar acciones mediante
-el uso de los conceptos estudiados
-(condicionales, operadores, bucles y funciones).
-
-</code></pre>
-<img src="../assets/codigo2/codigo17.png" alt="Diapositiva ampliación funciones">
-      <h3>Aproximación sencilla al funcionamiento de los portales</h3>
-
-  <pre><code>void Portal (objectPosition, objectVelocity) {  
-
-  if (el objeto cruza el portal azul){
-
-    desaparece ese objeto y clona otro idéntico en la posición del portal naranja
-    hacemos que la velocidad de salida de ese objeto sea igual a la del objeto original
-    con objectVelocity para que mantenga la inercia
-
-  }
-
-  else if (el objeto cruza el portal naranja) {
-
-    desaparece ese objeto y clona otro idéntico en la posición del portal azul
-    hacemos que la velocidad de salida de ese objeto sea igual a la del objeto original
-    con objectVelocity para que mantenga la inercia
-
-  }
-
-}
-
-</code></pre>
 
       <img src="img/consejos.png" alt="Diapositiva consejos">
 
