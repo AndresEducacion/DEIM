@@ -7,36 +7,42 @@
     <meta name="description"
         content="Sitio web de la asignatura Diseño de Entornos Interactivos Multimedia (DEIM). Recursos, apuntes y material de clase.">
     <title>DEIM | Diseño de Entornos Interactivos Multimedia</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="site-header">
-        <div class="container header-container">
-            <a href="#" class="logo">DEIM<span class="dot">.</span></a>
-            <nav class="main-nav" aria-label="Navegación principal">
-                <button class="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-                <ul class="nav-list">
-                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-                    <li><a href="#temario" class="nav-link">Temario</a></li>
-                    <li><a href="#tareas" class="nav-link">Tareas</a></li>
-                    <li><a href="#recursos" class="nav-link">Recursos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="site-header">
+    <div class="container header-container">
+        <a href="#" class="logo">DEIM<span class="dot">.</span></a>
 
-    <main id="main-content">
-        <section id="inicio" class="hero-section">
-            <div class="container hero-content">
+        <nav class="main-nav" aria-label="Navegación principal">
+            <button class="mobile-menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-list">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#temario" class="nav-link">Temario</a></li>
+                <li><a href="#tareas" class="nav-link">Tareas</a></li>
+                <li><a href="#recursos" class="nav-link">Recursos</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main-content">
+
+    <!-- HERO -->
+    <section id="inicio" class="hero-section">
+        <div class="container hero-content">
             <h1 class="hero-title">
                 Diseño de Entornos<br>
                 <span class="highlight">Interactivos Multimedia</span>
@@ -47,38 +53,52 @@
             </p>
 
             <div class="hero-visual">
-                <!-- Decorative abstract shapes will be created with CSS -->
                 <div class="shape shape-1"></div>
                 <div class="shape shape-2"></div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="temario" class="modules-section">
-            <div class="container">
-                <h2 class="section-title">Temario del Curso</h2>
-                <p class="section-description">Guías, apuntes y ejercicios organizados por módulos.</p>
+    <!-- TEMARIO -->
+    <section id="temario" class="modules-section">
+        <div class="container">
+            <h2 class="section-title">Temario del Curso</h2>
+            <p class="section-description">Guías, apuntes y ejercicios organizados por módulos.</p>
 
-                <div class="modules-grid">
-                    <!-- Module 0: Fundamentos de la programación en C# -->
-                    <article class="module-card">
-                        <div class="card-icon">💻</div>
-                        <h3 class="card-title">Fundamentos de la programación en C#</h3>
-                        <p class="card-text">Bases de la programación usando C#, ideal para comprender la lógica antes de saltar a motores como Unity.</p>
-                        <a href="lessons/codigo2.html" class="card-link">Ver materiales &rarr;</a>
-                    </article>
-                    <!-- Module 1 -->
-                    <article class="module-card">
-                        <div class="card-icon">🎨</div>
-                        <h3 class="card-title">Fundamentos de la programación</h3>
-                        <p class="card-text">Fundamentos de la programación con p5.js para tener un feedback visual</p>
-                        <a href="lessons/codigo1.html" class="card-link">Ver materiales &rarr;</a>
-                    </article>
+            <div class="modules-grid">
+                
+                <!-- Módulo JS -->
+                <a href="lessons/codigo1.html" class="module-card"
+                   aria-label="Fundamentos de la programación en JavaScript con p5.js">
+                    <h3 class="card-title">Fundamentos de la programación en JS</h3>
+                    <p class="card-text">
+                        Fundamentos de la programación con p5.js para obtener feedback visual inmediato.
+                    </p>
+                </a>
 
-                </div>
+                <!-- Módulo C# -->
+                <a href="lessons/codigo2.html" class="module-card"
+                   aria-label="Fundamentos de la programación en C#">
+                    <h3 class="card-title">Fundamentos de la programación en C#</h3>
+                    <p class="card-text">
+                        Bases de la programación usando C#, ideal para comprender la lógica antes de saltar a motores como Unity.
+                    </p>
+                </a>
+                <!-- Módulo Unity 1 -->
+                <a href="lessons/unity1.html" class="module-card"
+                   aria-label="Fundamentos de Unity">
+                    <h3 class="card-title">Fundamentos de Unity</h3>
+                    <p class="card-text">
+                        Fundamentos para comprender e incorporar Unity a los procesos de nuestros proyectos multimedia.
+                    </p>
+                </a>
             </div>
-        </section>
-        <section id="tareas" class="modules-section">
-            <div class="container">
+        </div>
+    </section>
+
+    <!-- TAREAS -->
+    <section id="tareas" class="modules-section">
+        <div class="container">
             <h2 class="section-title">Tareas</h2>
             <p class="section-description">
                 Ejercicios prácticos para aplicar los conceptos vistos en clase.
@@ -87,70 +107,77 @@
             <div class="modules-grid">
 
                 <!-- Tarea 1 -->
-                <article class="module-card">
-                    <div class="card-icon">📝</div>
-                    <h3 class="card-title">Tarea 1 · Básicos de la programación en P5.js</h3>
+                <a href="tasks/tarea1.html" class="module-card"
+                   aria-label="Tarea 1 programación básica en p5.js">
+                    <h3 class="card-title">
+                        Tarea 1 · Básicos de la programación en P5.js
+                    </h3>
                     <p class="card-text">
                         Primer ejercicio práctico para trabajar variables, operadores, condicionales, bucles y funciones.
                     </p>
-                    <a href="tasks/tarea1.html" class="card-link">
-                        Ver tarea &rarr;
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section id="recursos" class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Recursos Útiles</h2>
+
+            <ul class="resources-list">
+                <li>
+                    <a href="lessons/repo.html" class="resource-item">
+                        <span class="resource-icon">🔗</span>
+                        <span class="resource-name">Repositorio de códigos (Unity)</span>
+                        <span class="resource-action">Visitar</span>
                     </a>
-                </article>
+                </li>
 
-            </div>
-        </div>
-        </section>
-        <section id="recursos" class="resources-section">
-            <div class="container">
-                <h2 class="section-title">Recursos Útiles</h2>
-                <ul class="resources-list">
-                    <li>
-                        <a href="lessons/repo.html" class="resource-item">
-                            <span class="resource-icon">🔗</span>
-                            <span class="resource-name">Repositorio de códigos (Unity)</span>
-                            <span class="resource-action">Visitar</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="assets/DEIM GUIA EDUCATIVA.pdf" class="resource-item">
-                            <span class="resource-icon">📄</span>
-                            <span class="resource-name">DEIM GUIA EDUCATIVA</span>
-                            <span class="resource-action">Abrir</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="lessons/refes.html" class="resource-item">
-                            <span class="resource-icon">🔗</span>
-                            <span class="resource-name">Referencias generales (IG y TikTok)</span>
-                            <span class="resource-action">Visitar</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </main>
+                <li>
+                    <a href="assets/DEIM GUIA EDUCATIVA.pdf" class="resource-item">
+                        <span class="resource-icon">📄</span>
+                        <span class="resource-name">DEIM GUIA EDUCATIVA</span>
+                        <span class="resource-action">Abrir</span>
+                    </a>
+                </li>
 
-    <footer id="contacto" class="site-footer">
-        <div class="container footer-content">
-            <div class="footer-info">
-                <p class="footer-logo">DEIM</p>
-                <p>Clase de Diseño de Entornos Interactivos Multimedia.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Enlaces</h4>
-                <ul>
-                    <li><a href="mailto:profesor@ejemplo.com">Contactar Profesor</a></li>
-                    <li><a href="#">Campus Virtual</a></li>
-                </ul>
-            </div>
+                <li>
+                    <a href="lessons/refes.html" class="resource-item">
+                        <span class="resource-icon">🔗</span>
+                        <span class="resource-name">Referencias generales (IG y TikTok)</span>
+                        <span class="resource-action">Visitar</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 DEIM. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
+</main>
+
+<footer id="contacto" class="site-footer">
+    <div class="container footer-content">
+        <div class="footer-info">
+            <p class="footer-logo">DEIM</p>
+            <p>Clase de Diseño de Entornos Interactivos Multimedia.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Enlaces</h4>
+            <ul>
+                <li><a href="avm7m75@educa.mad.o>Contactar Profesor</a></li>
+                <li><a href="#">Campus Virtual</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 DEIM. Andrés Vidal Martín Martín.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
-
 </html>

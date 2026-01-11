@@ -117,6 +117,15 @@
     }
   </style>
     <link rel="stylesheet" href="../style.css">
+    <!-- Prism.js CSS -->
+<link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+<!-- Prism.js core -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+
+<!-- Lenguaje C# -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
+
 </head>
 
     <!-- Header sencillo -->
@@ -152,19 +161,19 @@
 
       <img src="../assets/codigo2/codigo4.png" alt="Diapositiva elementos de la variable">
 <h3>Declarar variables</h3>
-      <pre><code>let lifes = 3;    // JavaScript
+      <pre><code class="language-csharp">let lifes = 3;    // JavaScript
 int damage = 120; // C#
 // p5.js
 </code></pre>
 
-      <pre><code>let x = 50;  // Guardamos un número en la variable “x”
+      <pre><code class="language-csharp">let x = 50;  // Guardamos un número en la variable “x”
 circle(x, 200, 50); // En vez de poner un número ponemos “x”
 </code></pre>
 
       <img src="../assets/codigo2/codigo5.png" alt="Diapositiva tipos de variables">
 
       <h3>Tipos de variables</h3>
-      <pre><code>
+      <pre><code class="language-csharp">
 int lives = 3; // números enteros
 float attack = 2.47f; // números decimales (le ponemos una f de float)
 string = "Heyyy!"; // texto (siempre entre comillas)
@@ -187,7 +196,7 @@ string[] frutas = [ "melón", "manzana", "pera" ]; // Así también se puede, de
 
 
       <h3>Operadores artiméticos</h3>
-<pre><code>
+<pre><code class="language-csharp">
 int suma = a + b;
 int resta = a - b;
 int multiplicacion = a * b;
@@ -196,7 +205,7 @@ int modulo = a % b;
 </code></pre>
 
 <h3>Operadores de comparación</h3>
-<pre><code>
+<pre><code class="language-csharp">
 bool esMayor = a > b;      // true
 bool esMenor = a < b;      // false
 bool esIgual = a == b;     // false
@@ -208,7 +217,7 @@ bool menorOIgual = a <= b; // false
       
       <img src="../assets/codigo2/codigo7.png" alt="Diapositiva operadores lógicos">
 <h3>Condicionales</h3>
-<pre><code>if (impact > defense) {
+<pre><code class="language-csharp">if (impact > defense) {
   alive = false;
 }
 else if (impact < defense) {
@@ -220,10 +229,10 @@ else {
 </code></pre>
 
     
-</code></pre>
+
 <img src="../assets/codigo2/codigo8.png" alt="Diapositiva operadores lógicos">
 <h3>Operadores lógicos</h3>
-<pre><code>bool x = true;
+<pre><code class="language-csharp">bool x = true;
 bool y = false;
 
 bool andLogico = x && y; // false (solo true si ambos son true)
@@ -245,14 +254,14 @@ bool negacion  = !x;     // false (invierte el valor)
 
       <h3>bucle while()</h3>
 
-      <pre><code>while (num < 10) {
+      <pre><code class="language-csharp">while (num < 10) {
   print(num);
   num++; 
 }
 
 // bucle que se repite 10 veces, mientras la variable num sea menor que diez 
-se ejecutan las acciones de imprimir el número en la consola y sumarle uno.
-Cuando suma 11 la condición hace que se rompa el bucle.
+// se ejecutan las acciones de imprimir el número en la consola y sumarle uno.
+// Cuando suma 11 la condición hace que se rompa el bucle.
 </code></pre>
 
   </div>
@@ -262,13 +271,13 @@ Cuando suma 11 la condición hace que se rompa el bucle.
 
       <h3>bucle for()</h3>
 
-<pre><code>for (int num = 0; num >= 10, num++) {
+<pre><code class="language-csharp">for (int num = 0; num >= 10, num++) {
   print num 
 }
 
 // Literalmente es el mismo ejemplo de la anterior diapósitiva
-hecho con un bucle for() en vez de con un while(), es una manera de atajar la cuenta. 
-Se usa sobre todo en acciones secuenciales.
+// hecho con un bucle for() en vez de con un while(), es una manera de atajar la cuenta. 
+// Se usa sobre todo en acciones secuenciales.
 
 </code></pre>
 
@@ -284,7 +293,7 @@ Se usa sobre todo en acciones secuenciales.
       <img src="../assets/codigo2/codigo11.png" alt="Diapositiva funciones">
       <img src="../assets/codigo2/codigo12.png" alt="Diapositiva funciones">
 
-      <pre><code>void SaludoPersonalizado (string saludo) {
+      <pre><code class="language-csharp">void SaludoPersonalizado (string saludo) {
   print(saludo);
 }
 
@@ -292,8 +301,8 @@ SaludoPersonalizado("Heyyy");
 
 
 // Al crear mi función, le digo a qué va a referir la variable que le voy a pasar al llamarla.
-En este caso mi variable será un saludo.
-La acción es imprimir el saludo.
+// En este caso mi variable será un saludo.
+// La acción es imprimir el saludo.
 </code></pre>
 
       <img src="../assets/codigo2/codigo13.png" alt="Diapositiva ampliación funciones">
